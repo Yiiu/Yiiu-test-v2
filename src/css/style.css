@@ -1,14 +1,23 @@
-*{
+*{	
     -webkit-transition:0.5s;
     -moz-transition:0.5s;
     -ms-transition:0.5s;
     -o-transition:0.5s;
     transition:0.5s;
+    /* 不允许选择页面上的内容 */
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }
 header{
 	background:#8DD397;
 	width:100%;
 	height:100%;
+	cursor: default;
 }
 #header-content{
 	position:absolute;
@@ -35,14 +44,28 @@ h1.title{
 	display:inline-block;
 }
 .test{
-	height:20% !important;
+	height:90px !important
 }
 .test>div{
-	top:10% !important;
+	top:50px !important;
 }
 .test>div>h1{
 	font-size:22px !important;
 }
 .test>div>.nav li{
 	font-size:15px !important;
+}
+.test div.xia{
+	opacity:0;
+	top:50px !important;
+	display: none;
+}
+.xia{
+	position:absolute;
+	top:85%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.xia img{
+	width:80px;
 }
