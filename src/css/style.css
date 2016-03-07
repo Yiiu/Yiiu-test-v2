@@ -13,23 +13,29 @@
 	-ms-user-select:none;
 	user-select:none;
 }
-header{
+.box{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.content{
 	background:#8DD397;
 	width:100%;
 	height:100%;
 	cursor: default;
+	overflow:hidden;
 }
 #header-content{
 	position:absolute;
 	top:50%;
 	left:50%;
 	transform: translate(-50%,-50%);
+	z-index:666;
 }
 #header{
 	position:absolute;
 	width:100%;
 	height:100%;
-	overflow:hidden;
 }
 h1.title{
 	text-align:center;
@@ -43,17 +49,15 @@ h1.title{
 	font-size:2.6vw;
 	display:inline-block;
 }
-.test{
-	height:90px !important
-}
+/* 菜单的变换 */
 .test>div{
-	top:50px !important;
+	top:80px !important;
 }
 .test>div>h1{
-	font-size:22px !important;
+	font-size:40px !important;
 }
 .test>div>.nav li{
-	font-size:15px !important;
+	font-size:20px !important;
 }
 .test div.xia{
 	opacity:0;
@@ -68,4 +72,38 @@ h1.title{
 }
 .xia img{
 	width:80px;
+}
+.wrapper{
+	position:relative;
+	top:100px;
+	margin:0 auto;
+	padding:5px;
+	width:100%;
+	height:70%;
+	background:red;
+}
+.a{
+	width:60%;
+	margin:0 auto;
+}
+.t{
+	float:left;
+	margin:5px;
+	width:300px;
+	height:100px;
+	background:black;
+}
+.tt{
+	float:left;
+	margin:5px;
+	width:100px;
+	height:100px;
+	background:#ccc;
+}
+.ttt{
+	float:left;
+	margin:5px;
+	width:100px;
+	height:100px;
+	background:#ddd;
 }
