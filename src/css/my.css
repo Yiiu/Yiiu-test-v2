@@ -4,3 +4,4 @@ img,input{border:none;vertical-align:middle;}
 h1{}
 body{font-family:Tahoma,Arial,Helvetica,"宋体";}
 ul,ol{list-style-type:none;}
+chown www:www -R /home/wwwroot/blog.wanan.me

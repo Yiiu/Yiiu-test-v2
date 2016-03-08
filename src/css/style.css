@@ -77,37 +77,42 @@ h1.title{
 .wrapper{
 	position:relative;
 }
-.a{
+.test-mask{
+	display:block;
 	position: absolute;
 	top:50%;
 	left:50%;
-	width:700px;
-	height:400px;
-	line-height:400px;
+	width:940px;
+	height:450px;
+	line-height:450px;
 	margin-top:-200px;
-	margin-left:-350px;
+	margin-left:-470px;
 	float:left;
+	overflow:inherit;
 }
-.b{
-	float:left;
-	width:345px;
-	height:400px;
-	margin-right:5px;
-	line-height:400px;
-	background:#ccc;
+.container{
+	height:100%;
+	width:auto;
 }
-.c{
+.h-kuai{
 	float:left;
-	width:350px;
-	height:197.5px;
-	margin-bottom: 5px;
-	line-height:400px;
-	background:#ccc;
+	height:100%;
+	width:225px;
+	padding: 0 5px;
+	/*background:red;*/
 }
-.d{
+.kuai{
 	float:left;
-	width:350px;
-	height:197.5px;
-	line-height:400px;
-	background:#ccc;
+	background:blue;
+	width:100%;
+	margin-bottom:10px;
+}
+.kuai_xiao>.cont{
+	height:140px;/* 因为上层加了一个margin所以这里的长度-10 */
+}
+.kuai_da>.cont{
+	height:290px;
+}
+.none{
+	display: none;
 }
