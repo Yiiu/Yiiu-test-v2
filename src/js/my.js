@@ -1,4 +1,33 @@
 //
+var zhanshi = new Object();
+/* 按钮 */
+zhanshi.anniu = 
+		(function(){
+			var xia = document.getElementById('xia');		//按钮
+			xia.addEventListener('click',function(e){
+
+			},false)
+		})()
+/*zhanshi.kuai,color
+ *1.查找大块和小块
+ *2.小块加上绿色，大块加上蓝色
+ *
+ */
+zhanshi.kuai = {
+	color:(function(){
+			var xiao = document.getElementsByClassName('kuai_xiao');	//小块
+			var da = document.getElementsByClassName('kuai_da');		//大块
+			for(var i=0;i<xiao.length;i++){
+				xiao[i].style.background = "#339966";
+			}
+			for(var i=0;i<da.length;i++){
+				da[i].style.background = "#069";
+			}			
+		})()
+}
+zhanshi.data = {
+	
+}
 function test(){
 	var test = document.getElementsByTagName('header')[0];
 	var cls = test.className;

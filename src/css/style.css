@@ -13,19 +13,21 @@
 	-ms-user-select:none;
 	user-select:none;
 }
+/* 最外层的盒子box */
 .box{
 	position:absolute;
 	width:100%;
 	height:100%;
 }
+/* 内容content */
 .content{
 	position:absolute;
-	background:#8DD397;
 	width:100%;
 	height:100%;
 	cursor: default;
 	overflow:hidden;
 }
+/* 头部header的内容 */
 #header-content{
 	position:absolute;
 	top:50%;
@@ -33,15 +35,12 @@
 	transform: translate(-50%,-50%);
 	z-index:666;
 }
-#header{
-	position:absolute;
-	width:100%;
-	height:100%;
-}
+/*标题*/
 h1.title{
 	text-align:center;
 	font-size:6.6vw;
 }
+/* 菜单栏 */
 .nav{
 	text-align:center;
 }
@@ -51,32 +50,23 @@ h1.title{
 	display:inline-block;
 }
 /* 菜单的变换 */
-.test>div{
-	top:80px !important;
+.zhu{
+	background:#8DD397;
 }
-.test>div>h1{
-	font-size:40px !important;
+.fu{
+	background:#333;
 }
-.test>div>.nav li{
-	font-size:20px !important;
-}
-.test div.xia{
-	opacity:0;
-	top:50px !important;
-	display: none;
-}
-.xia{
+/* 切换按钮 */
+#xia{
 	position:absolute;
 	top:85%;
 	left:50%;
 	transform: translate(-50%,-50%);
 }
-.xia img{
+#xia img{
 	width:80px;
 }
-.wrapper{
-	position:relative;
-}
+/* 实验展示 */
 .test-mask{
 	display:block;
 	position: absolute;
@@ -88,12 +78,14 @@ h1.title{
 	margin-top:-200px;
 	margin-left:-470px;
 	float:left;
-	overflow:inherit;
+	/*overflow:inherit;*/
 }
+/* 实验展示内容 */
 .container{
 	height:100%;
 	width:auto;
 }
+/*横向 块*/
 .h-kuai{
 	float:left;
 	height:100%;
@@ -101,17 +93,26 @@ h1.title{
 	padding: 0 5px;
 	/*background:red;*/
 }
+/*单独的快*/
 .kuai{
+	text-align:center;
 	float:left;
-	background:blue;
 	width:100%;
 	margin-bottom:10px;
 }
+/* 大的块 */
 .kuai_xiao>.cont{
+	line-height:140px;
 	height:140px;/* 因为上层加了一个margin所以这里的长度-10 */
 }
+/* 小的块 */
 .kuai_da>.cont{
+	line-height:290px;
 	height:290px;
+}
+.cont{
+	font-size:26px;
+	color:white;
 }
 .none{
 	display: none;
