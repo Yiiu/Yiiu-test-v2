@@ -5,7 +5,7 @@ zhanshi.anniu =
 		(function(){
 			var xia = document.getElementById('xia');		//按钮
 			xia.addEventListener('click',function(e){
-
+				 zhanshi.qiehuan()
 			},false)
 		})()
 /*zhanshi.kuai,color
@@ -13,6 +13,38 @@ zhanshi.anniu =
  *2.小块加上绿色，大块加上蓝色
  *
  */
+ zhanshi.qiehuan = 
+ 		function(){
+ 			var box = document.getElementsByClassName('box')[0];		//box
+ 			var header = document.getElementsByTagName('header')[0];	//header
+ 			var zhanshi = document.getElementsByClassName('test-mask')[0]
+ 			var hopacity = 100;
+ 			var zopacity = 0;
+ 			if(/zhu/.test(box.className)){
+ 				/* 隐藏header，显示zhanshi */
+ 				var set = setInterval(function(){
+ 					var c = null;
+ 					if(header.style.opacity==0){
+ 						header.className = 'none';
+ 						box.className = box.className.replace(/zhu/,'fu');
+ 						zhanshi.className = zhanshi.className.replace(/ none/,'');
+ 						var iset = setInterval(function(){
+ 							if(zhanshi.style.opacity == 1){
+ 								clearInterval(iset);
+ 							}else{
+ 								zopacity+=10;
+ 								zhanshi.style.opacity = zopacity/100;
+ 							}
+ 						},60)
+ 						clearInterval(set);
+ 					}else{
+ 						hopacity-=10;
+ 						header.style.opacity = hopacity/100;
+ 					}
+ 				},60)
+ 				/* 显示展示 */
+ 			}
+ 		}
 zhanshi.kuai = {
 	color:(function(){
 			var xiao = document.getElementsByClassName('kuai_xiao');	//小块
@@ -26,7 +58,8 @@ zhanshi.kuai = {
 		})()
 }
 zhanshi.data = {
-	
+	name:["Photo-Gallery","Photo-Gallery-3D"],
+	href:[""]
 }
 function test(){
 	var test = document.getElementsByTagName('header')[0];
