@@ -58,9 +58,16 @@ h1.title{
 /* 切换按钮 */
 #xia{
 	position:absolute;
+	width:80px;
+	height:80px;
 	top:85%;
 	left:50%;
 	transform: translate(-50%,-50%);
+	background:url(../img/xia.png) no-repeat;
+	background-position: center;
+	background-size: 80px 80px;
+	-webkit-background-size: 80px 80px;
+	cursor:pointer;
 }
 #xia img{
 	width:80px;
@@ -106,8 +113,32 @@ h1.title{
 }
 /* 小的块 */
 .kuai_da>.cont{
+	cursor:pointer;
 	line-height:290px;
 	height:290px;
+}
+.botton div{
+	position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 19.5px;
+    border: solid rgb(255,255,255) 2px;
+	cursor:pointer;
+}
+.botton #tui{
+	background:url(../img/tui.png) no-repeat;
+	background-position: center;
+	background-size: 25px 25px;
+	-webkit-background-size: 25px 25px;
+	left: 900px;
+    top: -50px;
+}
+.botton #xiang{
+    bottom: -50px;
+	background:url(../img/xiang.png) no-repeat;
+	background-position: center;
+	background-size: 25px 25px;
+	-webkit-background-size: 25px 25px;
 }
 .cont{
 	font-size:26px;

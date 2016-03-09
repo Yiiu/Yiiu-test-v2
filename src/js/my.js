@@ -8,11 +8,6 @@ zhanshi.anniu =
 				 zhanshi.qiehuan()
 			},false)
 		})()
-/*zhanshi.kuai,color
- *1.查找大块和小块
- *2.小块加上绿色，大块加上蓝色
- *
- */
  zhanshi.qiehuan = 
  		function(){
  			var box = document.getElementsByClassName('box')[0];		//box
@@ -45,6 +40,11 @@ zhanshi.anniu =
  				/* 显示展示 */
  			}
  		}
+/*zhanshi.kuai,color
+ *1.查找大块和小块
+ *2.小块加上绿色，大块加上蓝色
+ *
+ */
 zhanshi.kuai = {
 	color:(function(){
 			var xiao = document.getElementsByClassName('kuai_xiao');	//小块
