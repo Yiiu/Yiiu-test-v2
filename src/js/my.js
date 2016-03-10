@@ -4,17 +4,24 @@ var zhanshi = new Object();
 zhanshi.anniu = 
 		(function(){
 			var xia = document.getElementById('xia');		//按钮
+			var tui = document.getElementById('tui');
 			xia.addEventListener('click',function(e){
 				 zhanshi.qiehuan()
 			},false)
+			tui.addEventListener('click',function(e){
+				 zhanshi.qiehuan()
+			},false)
 		})()
+/* nnd打到最后才发现忘了注释，连自己都忘记在做什么了 */
  zhanshi.qiehuan = 
  		function(){
  			var box = document.getElementsByClassName('box')[0];		//box
  			var header = document.getElementsByTagName('header')[0];	//header
  			var zhanshi = document.getElementsByClassName('test-mask')[0]
- 			var hopacity = 100;
- 			var zopacity = 0;
+ 			var hopacity = 100;			//首页的透明度控制
+ 			var zopacity = 0;			//展示的透明度控制
+ 			var ho = 0;					//首页的透明度控制
+ 			var zo = 100;				//展示的透明度控制
  			if(/zhu/.test(box.className)){
  				/* 隐藏header，显示zhanshi */
  				var set = setInterval(function(){
@@ -38,7 +45,24 @@ zhanshi.anniu =
  					}
  				},60)
  				/* 显示展示 */
- 			}
+ 			}else{
+ 				/* 隐藏header，显示zhanshi */
+ 					var iset = setInterval(function(){
+ 						if(zhanshi.style.opacity == 0){
+ 							header.className = header.className.replace(/none/,'');
+ 							box.className = box.className.replace(/fu/,'zhu');
+ 							zhanshi.className = 'test-mask none';
+ 							clearInterval(iset);
+ 						}else{ 
+ 							zo-=10;
+ 							zhanshi.style.opacity = zo/100;
+ 						}
+ 						if(header.style.opacity!=1){
+	 						ho+=10;
+	 						header.style.opacity = ho/100;
+ 						}
+ 					},60)
+  			}
  		}
 /*zhanshi.kuai,color
  *1.查找大块和小块
@@ -60,16 +84,6 @@ zhanshi.kuai = {
 zhanshi.data = {
 	name:["Photo-Gallery","Photo-Gallery-3D"],
 	href:[""]
-}
-function test(){
-	var test = document.getElementsByTagName('header')[0];
-	var cls = test.className;
-	if(!/test/.test(cls)){
-		cls += "test";
-	}else{
-		cls = "";
-	}
-	return test.className = cls;
 }
 /*
 elem 元素 ClassName 要修改的name NewClassName 要修改成的值
